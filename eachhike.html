@@ -37,6 +37,22 @@
     <!-------------------------------------------->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
+    <style>
+        /* Add CSS styles for the card container with vertical scrolling */
+        .card-container {
+            max-height: 350px;
+            /* Adjust the maximum height as needed */
+            overflow-y: auto;
+        }
+
+        /* Style the individual cards as needed */
+        .card {
+            width: 45%;
+            /* Adjust the width as per your design, leaving a little space for margins */
+            margin: 2%;
+            /* Add margin between cards */
+        }
+    </style>
 
 </head>
 
@@ -56,6 +72,34 @@
                 onclick="saveHikeDocumentIDAndRedirect()">Write Review</button>
         </div>
     </div>
+    <div class="container">
+        <h2>Reviews:</h2>
+        <div id="details-go-here"></div>
+        <!-- Here is the container for cards with horizontal scrolling -->
+        <div class="card-container">
+            <div id="reviewCardGroup" class="row row-cols-auto">
+                <!-- Add your card templates here -->
+            </div>
+        </div>
+    </div>
+
+    <template id="reviewCardTemplate">
+        <div class="card bg-secondary">
+            <img class="card-img-top">
+            <div class="card-body bg-light">
+                <h5 class="title">placeholder</h5>
+                <p class="star-rating"></p>
+                <p class="time">placeholder</p>
+                <p class="level">placeholder</p>
+                <p class="season">placeholder</p>
+                <p class="scrambled">placeholder</p>
+                <p class="flooded">placeholder</p>
+                <br>
+                <p class="description">This card has supporting text below as a natural lead-in to additional content.
+                </p>
+            </div>
+        </div>
+    </template>
     <!-- the body of your page goes here -->
     <!-- stuff -->
 
